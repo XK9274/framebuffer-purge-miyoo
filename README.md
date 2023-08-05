@@ -10,3 +10,5 @@ Test files to restore the screen after something causes bad FB params or a black
 - call `fbpurge restore` after 
 
 - cleanup `framebuffer_vinfo.bin` (or add this to source, whatever floats your boat)
+
+The problem is, you may also have to kill anything that has a lock on `/dev/fb0` (in this case it's batmon, keymon, /dev/l and whatever app is currently causing the issue or running at the time (in our case `prompt`)
